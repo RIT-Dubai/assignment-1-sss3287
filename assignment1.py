@@ -19,6 +19,9 @@ def rectangle_will_fit(x, y, length1, height1):
 def draw_shape(shape, color_code, x, y, length, height):
 
     if shape == 'r':
+        turtle.penup()
+        turtle.goto(x, y)
+        turtle.pendown()
         turtle.begin_fill()
         turtle.fillcolor(color_code)
         for i in range(2):
@@ -30,12 +33,18 @@ def draw_shape(shape, color_code, x, y, length, height):
         input()
 
     elif shape == 'c':
+        turtle.penup()
+        turtle.goto(x, y)
+        turtle.pendown()
         turtle.begin_fill()
         turtle.fillcolor(color_code)
         turtle.circle(length)
         turtle.end_fill()
 
     elif shape == 't':
+        turtle.penup()
+        turtle.goto(x, y)
+        turtle.pendown()
         turtle.begin_fill()
         turtle.fillcolor(color_code)
         for i in range(3):
@@ -49,7 +58,7 @@ def draw_shape(shape, color_code, x, y, length, height):
 
 
 def main():
-    draw_shape('c', 'pink', 0, 0, 250, 0)
+    draw_shape('r', 'pink', 250, 200, 250, 150)
 
 
 main()
