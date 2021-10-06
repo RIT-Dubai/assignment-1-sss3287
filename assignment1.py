@@ -1,27 +1,27 @@
 import turtle
-X_MAX = 400
-X_MIN = -X_MAX
-Y_MAX = 400
-Y_MIN = -Y_MAX
+X_MAX = 200
+X_MIN = -200
+Y_MAX = 200
+Y_MIN = -200
 
-#Below checks if rectangle will fit in python window
-
-
-def rectangle_will_fit(x, y, length1, height1):
-    if X_MIN <= x <= X_MAX and Y_MIN <= y <= Y_MAX and X_MIN <= x + length1 <= X_MAX and Y_MIN <= y - height1:
-        print ('True')
-    else:
-        print('False')
-
-#Below draws a rectangle of the specified shape,color,x,y,length and height.
+def init():
+    turtle.penup()
+    turtle.tracer(0)
+    turtle.goto(X_MIN, Y_MAX)
+    turtle.pendown()
+    for i in range(4):
+        turtle.forward(400)
+        turtle.right(90)
 
 
 def draw_shape(shape, color_code, x, y, length, height):
-
+    turtle.tracer(1)
+    turtle.penup()
+    turtle.goto(x, y)
+    turtle.pendown()
+    turtle.begin_fill()
+    turtle.fillcolor(color_code)
     if shape == 'r':
-        turtle.penup()
-        turtle.goto(x, y)
-        turtle.pendown()
         turtle.begin_fill()
         turtle.fillcolor(color_code)
         for i in range(2):
@@ -33,6 +33,7 @@ def draw_shape(shape, color_code, x, y, length, height):
         input()
 
     elif shape == 'c':
+        turtle.tracer(1)
         turtle.penup()
         turtle.goto(x, y)
         turtle.pendown()
@@ -42,6 +43,7 @@ def draw_shape(shape, color_code, x, y, length, height):
         turtle.end_fill()
 
     elif shape == 't':
+        turtle.tracer(1)
         turtle.penup()
         turtle.goto(x, y)
         turtle.pendown()
@@ -53,12 +55,13 @@ def draw_shape(shape, color_code, x, y, length, height):
         turtle.end_fill()
 
     else:
-        return
-
+        return 0
 
 
 def main():
-    draw_shape('r', 'pink', 250, 200, 250, 150)
-
+    init()
+    draw_shape('t', 'blue', 100, -100, 100, 0)
+    draw_shape('c', 'green', 100, 100, 50, 0)
+    draw_shape('r', 'red', -100, -50, 90, 70)
 
 main()

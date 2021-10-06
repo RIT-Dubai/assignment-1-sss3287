@@ -4,10 +4,10 @@ import assignment1
 def test_rectangle_will_fit():
     assignment1.rectangle_will_fit(-100, 100, 50, 50)
 
-    x = -100
-    assert (x == -100)
+    assignment1.x
+    assert (assignment1.x == -100)
 
-    y = 100
+
     assert (y == 100)
 
     length1 = 50
@@ -17,23 +17,23 @@ def test_rectangle_will_fit():
     assert (height1 == 50)
 
 
-def test_draw_shape():
-    assignment1.draw_shape('r', 'red', 50, 50, 300, 150)
+def test_draw_shape_rectangle():
+    assignment1.draw_shape('r', 'orange', 0, 0, 250, 150)
 
     shape = 'r'
     assert(shape == 'r')
 
-    color_code = 'red'
-    assert (color_code == 'red')
+    color_code = 'orange'
+    assert (color_code == 'orange')
 
-    x = 50
-    assert (x == 50)
+    x = 0
+    assert (x == 0)
 
-    y = 50
-    assert (y == 50)
+    y = 0
+    assert (y == 0)
 
-    length = 300
-    assert (length == 300)
+    length = 250
+    assert (length == 250)
 
     height = 150
     assert (height == 150)
