@@ -1,68 +1,53 @@
 import turtle
 import assignment1
 
-def test_rectangle_will_fit():
-    assignment1.rectangle_will_fit(-100, 100, 50, 50)
-
-    assignment1.x
-    assert (assignment1.x == -100)
-
-
-    assert (y == 100)
-
-    length1 = 50
-    assert (length1 == 50)
-
-    height1 = 50
-    assert (height1 == 50)
-
 
 def test_draw_shape_rectangle():
-    assignment1.draw_shape('r', 'orange', 0, 0, 250, 150)
+    assignment1.draw_shape('r', 'red', -100, -50, 90, 70)
 
     shape = 'r'
     assert(shape == 'r')
 
-    color_code = 'orange'
-    assert (color_code == 'orange')
+    color_code = 'red'
+    assert (color_code == 'red')
 
-    x = 0
-    assert (x == 0)
+    x = -100
+    assert (x == -100)
 
-    y = 0
-    assert (y == 0)
+    y = -50
+    assert (y == -50)
 
-    length = 250
-    assert (length == 250)
+    length = 90
+    assert (length == 90)
 
-    height = 150
-    assert (height == 150)
+    height = 70
+    assert (height == 70)
 
 
 def test_draw_shape():
-    assignment1.draw_shape('c', 'pink', 0, 0, 150, 0)
+    assignment1.draw_shape('c', 'green', 100, 100, 50, 0)
 
     shape = 'c'
     assert(shape == 'c')
 
-    color_code = 'pink'
-    assert (color_code == 'pink')
+    color_code = 'green'
+    assert (color_code == 'green')
 
-    x = 0
-    assert (x == 0)
+    x = 100
+    assert (x == 100)
 
-    y = 0
-    assert (y == 0)
+    y = 100
+    assert (y == 100)
 
-    length = 150
-    assert (length == 150)
+    length = 50
+    assert (length == 50)
 
     height = 0
     assert (height == 0)
 
 
 def test_draw_shape():
-    assignment1.draw_shape('t', 'blue', 50, 50, 200, 0)
+    assignment1.draw_shape('t', 'blue', 100, -100, 100, 0)
 
     shape = 't'
     assert(shape == 't')
@@ -70,14 +55,14 @@ def test_draw_shape():
     color_code = 'blue'
     assert (color_code == 'blue')
 
-    x = 50
-    assert (x == 50)
+    x = 100
+    assert (x == 100)
 
-    y = 50
-    assert (y == 50)
+    y = -100
+    assert (y == -100)
 
-    length = 200
-    assert (length == 200)
+    length = 100
+    assert (length == 100)
 
     height = 0
     assert (height == 0)
