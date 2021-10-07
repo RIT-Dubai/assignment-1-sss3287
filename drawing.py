@@ -82,11 +82,11 @@ def triangle_will_fit(x, y, length):
 
 def get_color(color_code):
     color = ""
-    if color_code == "blue":
+    if color_code == "b":
         color = "blue"
-    elif color_code == "green":
+    elif color_code == "g":
         color = "green"
-    elif color_code == "red":
+    elif color_code == "r":
         color = "red"
 
     return color

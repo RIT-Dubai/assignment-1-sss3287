@@ -69,7 +69,7 @@ def test_triangle_will_fit():
 
 
 def test_get_color():
-    color = drawing.get_color("blue")
+    color = drawing.get_color("b")
     assert(color == "blue")
 
 """This function tests draw shape function for rectangle"""
