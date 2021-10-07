@@ -28,12 +28,13 @@ def rectangle_will_fit(x, y, length, height):
     turtle.setheading(0)
     if XT+length>X_MAX//2 or XT<X_MIN//2:
         return False
-
+        print("It will not fit!")
     if YT+height>Y_MAX//2 or YT<Y_MIN//2:
         return False
-
+        print("It will not fit!")
     else:
           return True
+          print("It will fit!")
 
 """This function checks if the circle_will_fit"""
 
@@ -48,14 +49,14 @@ def circle_will_fit(x, y, length):
     i = 0
     if XT+length>X_MAX or XT-length<X_MIN:
         return False
-
+        print("It will not fit!")
     if YT+length>Y_MAX or YT-length<X_MIN:
         return False
-
+        print("It will not fit!")
 
     else:
         return True
-
+        print("It will fit!")
 """This function checks if the triangle_will_fit"""
 
 
@@ -69,13 +70,13 @@ def triangle_will_fit(x, y, length):
     i = 0
     if x<X_MIN or x+length>X_MAX:
         return False
-
+        print("It will not fit!")
     if y<Y_MIN or y+(length*math.sqrt(3)/2)>Y_MAX:
         return False
-
+        print("It will not fit!")
     else:
         return True
-
+        print("It will fit!")
 """This function limits the colour"""
 
 
@@ -112,11 +113,12 @@ def draw_shape(shape, color_code, x, y, length, height):
         if rectangle_will_fit(-100, -50, 90, 70) == True:
             perimeter = 2*(length + height)
             print("The Perimeter of rectangle is", perimeter)
+            print("It will fit!")
 
         else:
             perimeter = 2*(length + height)
             print("The Perimeter of rectangle is", perimeter)
-
+            print("It will not fit!")
         return perimeter
 
     elif shape == 'c':
@@ -132,9 +134,10 @@ def draw_shape(shape, color_code, x, y, length, height):
         if circle_will_fit(100, 100, 50)==True:
             perimeter = math.pi*length*2
             print("The Perimeter of circle is", perimeter)
+            print("It will fit!")
         else:
             print("The Perimeter of circle is", perimeter)
-
+            print("It will not fit!")
         return perimeter
 
     elif shape == 't':
@@ -152,8 +155,10 @@ def draw_shape(shape, color_code, x, y, length, height):
         if triangle_will_fit(100, -100, 100)==True:
             perimeter = length*3
             print("The Perimeter of triangle is", perimeter)
+            print("It will fit!")
         else:
             print("The Perimeter of triangle is", perimeter)
+            print("It will not fit!")
 
         return perimeter
 
