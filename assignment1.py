@@ -28,13 +28,13 @@ def rectangle_will_fit(x, y, length, height):
     turtle.setheading(0)
     if XT+length>X_MAX//2 or XT<X_MIN//2:
         return False
-        print("It will not fit!")
+
     if YT+height>Y_MAX//2 or YT<Y_MIN//2:
         return False
-        print("It will not fit!")
+
     else:
-          return True
-          print("It will fit!")
+        return True
+
 
 """This function checks if the circle_will_fit"""
 
@@ -49,14 +49,14 @@ def circle_will_fit(x, y, length):
     i = 0
     if XT+length>X_MAX or XT-length<X_MIN:
         return False
-        print("It will not fit!")
+
     if YT+length>Y_MAX or YT-length<X_MIN:
         return False
-        print("It will not fit!")
+
 
     else:
         return True
-        print("It will fit!")
+
 """This function checks if the triangle_will_fit"""
 
 
@@ -70,13 +70,13 @@ def triangle_will_fit(x, y, length):
     i = 0
     if x<X_MIN or x+length>X_MAX:
         return False
-        print("It will not fit!")
+
     if y<Y_MIN or y+(length*math.sqrt(3)/2)>Y_MAX:
         return False
-        print("It will not fit!")
+
     else:
         return True
-        print("It will fit!")
+
 """This function limits the colour"""
 
 
