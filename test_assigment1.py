@@ -78,7 +78,7 @@ def test_get_color():
 def test_draw_shape_rectangle():
     r = assignment1.draw_shape('r', 'blue', -100, -50, 90, 70)
 
-    assert(r == 2*(100+50))
+    assert(r == 2*(90+70))
 
     x = round(turtle.xcor(), 0)
     assert(x == -100)
@@ -95,7 +95,7 @@ def test_draw_shape_rectangle():
 """This function tests the draw shape function for circle"""
 
 
-def test_draw_shape():
+def test_draw_shape_circle():
     c = assignment1.draw_shape('c', 'green', 100, 100, 50, 0)
 
     assert(c == 2*math.pi*50)
@@ -115,7 +115,7 @@ def test_draw_shape():
 """This function tests the draw shape function for triangle"""
 
 
-def test_draw_shape():
+def test_draw_shape_triangle():
     t = assignment1.draw_shape('t', 'blue', 100, -100, 100, 0)
 
     assert(t == 3*100)
